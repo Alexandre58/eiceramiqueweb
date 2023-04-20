@@ -4,6 +4,8 @@ import LinkRetour from "@/components/Linkretour";
 import RetourneAdresse from "@/components/RetourneAdresse";
 import React from "react";
 import styles from "../../styles/_atelier.module.scss";
+import img9 from "../../public/images/img9.jpg";
+import Image from "next/image";
 //RECUP DE TOUT LES ARTICLES  POUR CREER DES PAGES POUR CHAQUE ARTICLE AVEC [ARTICLE];JS
 //ne pas oublier de mettre les props dans***const Article = (props) => {...
 export async function getStaticProps(context) {
@@ -42,9 +44,8 @@ const Article = (props) => {
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>
-          Article {props.article.id}
+          {props.article[0].username}
         </h1>
-        <LinkArticles retour="Retour  liste d'article" />
       </div>
       <article className={styles.atelier_section_article}>
         <p>Découvrez l'article de l'atelier = {props.article[0].username}</p>
@@ -52,7 +53,16 @@ const Article = (props) => {
           {props.article[0].name} {props.article[0].firstname}
         </p>
         <p>{props.article[0].comment}</p>
+        <Image
+          className={styles.atelier_Images}
+          src={img9}
+          alt="Picture of the author"
+          width={2400}
+          height={3408}
+          placeholder="blur"
+        />
       </article>
+      <LinkArticles retour="Retour  liste d'article" />
       <AsideNav />
     </section>
   );

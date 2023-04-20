@@ -35,20 +35,6 @@ const Formulaire = () => {
 
   return (
     <>
-      <div className={styles.formulaire_div_container}>
-        <h1 className="text-3xl">
-          Signup1 avec useRef le deuxieme est en projet 4
-        </h1>
-        <p className="text-3xl_p">description du formulaire : </p>
-        <p className="text-3xl_p">
-          Ce formulaire se raffraichi que lorsque l'on clic sur le bouton
-          envoyé.
-        </p>
-        <p className="text-3xl_p">
-          Dans le projet 4 le formulaire se raffrai à chaque tape sur le
-          clavier.::
-        </p>
-      </div>
       <form
         className={styles.formulaire_form_container}
         onSubmit={formHandler()}

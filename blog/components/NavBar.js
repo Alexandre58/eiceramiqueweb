@@ -29,7 +29,7 @@ const NavBar = () => {
         <Link
           href={"/web"}
           className={
-            router.pathname === "/[web]"
+            router.pathname === "/web"
               ? styles.navbar_Nav_link_active
               : styles.navbar_Nav_link
           }
@@ -72,8 +72,8 @@ const NavBar = () => {
           </Link>
         )}
         {user && (
-          <button onClick={quitter}>
-            Bonjour <strong>{user}</strong>. Déconnectez-vous
+          <button onClick={quitter} className={styles.navbar_Nav_link_active}>
+            {/**Bonjour...<strong> {user}</strong>. */} Déconnectez-vous
           </button>
         )}
       </nav>
