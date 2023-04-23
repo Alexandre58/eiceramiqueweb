@@ -37,12 +37,9 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-  console.log("******************");
-  console.log(props.articles[0].name);
-  console.log("******************");
   const title = props.articles[0].username;
   const commentaires = props.articles[0].comment;
-  console.log(commentaires);
+  console.log(props.articles[1].isadmin);
   const router = useRouter();
 
   return (
@@ -166,7 +163,7 @@ export default function Home(props) {
             />
           </Link>
           {/**card 7 */}
-          <Link className={styles.home_Link} href={"/web"}>
+          <Link className={styles.home_Link} href={"/webs"}>
             <Image
               className={styles.home_Images_widh_differente}
               src={img6}

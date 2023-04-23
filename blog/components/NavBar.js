@@ -27,9 +27,9 @@ const NavBar = () => {
           Accueil
         </Link>
         <Link
-          href={"/web"}
+          href={"/webs"}
           className={
-            router.pathname === "/web"
+            router.pathname === "/webs"
               ? styles.navbar_Nav_link_active
               : styles.navbar_Nav_link
           }

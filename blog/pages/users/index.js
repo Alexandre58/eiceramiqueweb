@@ -8,7 +8,7 @@ import img8 from "../../public/images/img8.jpg";
 import AsideNav from "@/components/AsideNav";
 //import uuid
 import { v4 as uuidv4 } from "uuid";
-import RetourneAdresse from "@/components/RetourneAdresse";
+
 const AllUsers = ({ users }) => {
   return (
     <section className={styles.users_section_container}>

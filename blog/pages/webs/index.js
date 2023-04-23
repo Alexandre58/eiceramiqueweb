@@ -1,11 +1,13 @@
 import AsideNav from "@/components/AsideNav";
 import React from "react";
-import styles from "../styles/_atelier.module.scss";
+import styles from "../../styles/_atelier.module.scss";
 import LinkRetour from "@/components/Linkretour";
 import Image from "next/image";
-import img6 from "../public/images/img6.PNG";
-
-const Web = () => {
+import img6 from "../../public/images/img6.PNG";
+import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
+const Web = ({ webs }) => {
+  console.log(webs);
   return (
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>
@@ -20,6 +22,17 @@ const Web = () => {
           width={1847}
           height={876}
         />
+        <h2>Liste des sites prêt à l'emploi</h2>
+        {webs.map((web) => {
+          return (
+            <div key={uuidv4()} className={styles.atelier_section_web_map}>
+              <Link href={`/webs/${web.id}`} passHref>
+                <p>Site:{web.id}</p>
+                <p>TITRE: {web.title}</p>
+              </Link>
+            </div>
+          );
+        })}
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
@@ -39,3 +52,12 @@ const Web = () => {
 };
 
 export default Web;
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+  return {
+    props: {
+      webs: data.slice(0, 10),
+    },
+  };
+}

@@ -80,7 +80,7 @@ const AsideNav = () => {
         />
         Les news
       </Link>
-      <Link href={"/web"} className={styles.asideNav_link}>
+      <Link href={"/webs"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img6}
