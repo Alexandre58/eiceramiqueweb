@@ -13,22 +13,27 @@ function Web({ web }) {
 }
 export default Web;
 //pour ouvrir les pages spécifiques à chaque id params retourne un objet dans un tableau
+// export async function getStaticPaths() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const data = await res.json();
+//   const paths = data.map((web) => {
+//     return {
+//       params: {
+//         webId: `${web.id}`,
+//       },
+//     };
+//   });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 export async function getStaticPaths() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  const paths = data.map((web) => {
-    return {
-      params: {
-        webId: `${web.id}`,
-      },
-    };
-  });
   return {
-    paths,
-    fallback: false,
+    paths: [{ params: { webId: "1" } }],
+    fallback: true,
   };
 }
-
 //import de tout les elemeents avec un id params
 export async function getStaticProps(context) {
   const { params } = context;
@@ -40,5 +45,6 @@ export async function getStaticProps(context) {
     props: {
       web: data,
     },
+    revalidate: 10,
   };
 }

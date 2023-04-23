@@ -27,10 +27,10 @@ const Articles = ({ articles }) => {
             <Link
               className={styles.article_section_article}
               href={`/articles/${article.id.toString()}`}
+              passHref
             >
               <p>ARTICLE {article.id} sur 100</p>
-              <p>{article.username.slice(0, 30) + " ..."}</p>
-              {console.log(article.username)}
+              <p>{article.username.slice(0, 130) + " ..."}</p>
 
               <u> Lire la suite</u>
             </Link>
