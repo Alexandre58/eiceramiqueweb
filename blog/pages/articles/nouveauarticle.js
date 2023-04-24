@@ -3,10 +3,18 @@ import { useRouter } from "next/router";
 import LinkRetour from "@/components/Linkretour";
 import styles from "../../styles/_atelier.module.scss";
 import AsideNav from "@/components/AsideNav";
+import Head from "next/head";
 const NouvelleArticle = () => {
   const router = useRouter();
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>News, news, news.</title>
+        <meta
+          name="description"
+          content="Les nouveaux articles, tout sur les techniques nouvelles, sur les expositions, les documentations."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>NEWS</h1>
         <LinkRetour retour="Retour" />

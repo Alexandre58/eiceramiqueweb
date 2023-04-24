@@ -9,11 +9,19 @@ import Image from "next/image";
 import img8 from "../../public/images/img8news.jpg";
 //import uuid
 import { v4 as uuidv4 } from "uuid";
+import Head from "next/head";
 const Articles = ({ articles }) => {
   const router = useRouter();
 
   return (
     <section className={styles.article_section_container}>
+      <Head>
+        <title>articles eiceramique</title>
+        <meta
+          name="description"
+          content="tous les articles pour la céramique et la poterie, inclus la fabrication de four ,des réparations de four, les ateliers en France et ailleur, des articles sur tout ce qui à rapport avec la céramique, les tours, l'outillage spécifique, le tournage. "
+        />
+      </Head>
       <div className={styles.article_div_container}>
         <h1 className={styles.article_section_h1}>Articles</h1>
         <LinkRetour retour="Retour" />
@@ -26,11 +34,14 @@ const Articles = ({ articles }) => {
           <article key={uuidv4()}>
             <Link
               className={styles.article_section_article}
-              href={`/articles/${article.id.toString()}`}
+              href={`/articles/${article.id}`}
               passHref
             >
-              <p>ARTICLE {article.id} sur 100</p>
-              <p>{article.username.slice(0, 130) + " ..."}</p>
+              <p>ARTICLE {article.id}</p>
+              <p>
+                Article édité par {article.name}&nbsp;{article.firstname}
+              </p>
+              <p>{article.username.slice(0, 150) + " ..."}</p>
 
               <u> Lire la suite</u>
             </Link>
@@ -52,4 +63,5 @@ export async function getStaticProps() {
     },
   };
 }
+
 export default Articles;

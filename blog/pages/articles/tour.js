@@ -2,9 +2,17 @@ import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
 import styles from "../../styles/_atelier.module.scss";
+import Head from "next/head";
 const Tour = () => {
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>Les tours</title>
+        <meta
+          name="description"
+          content="Le tournage du potier,les tours à vendre , à fabriquer, à pied, à baton, éléctrique ou autre, vous avez des idées? allons-y !!."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>Les Tours</h1>
         <LinkRetour retour="Retour" />

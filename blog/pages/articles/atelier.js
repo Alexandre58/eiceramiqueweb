@@ -5,9 +5,17 @@ import React from "react";
 import styles from "../../styles/_atelier.module.scss";
 import img9 from "../../public/images/img9.jpg";
 import Image from "next/image";
+import Head from "next/head";
 const Atelier = () => {
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>Les ateliers de votre région</title>
+        <meta
+          name="description"
+          content="Les ateliers de votre région sont diponibles. Chaque atelier vous invite à visiter virtuellement leurs endroit de fabrication et de vente. Les potiers et céramiste vous attendent pour une visite réel dans leurs ateliers lors de votre passage en France."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>Les Ateliers</h1>
         <div className={styles.atelier_section_div_link}>

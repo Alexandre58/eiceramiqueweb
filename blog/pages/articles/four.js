@@ -2,9 +2,17 @@ import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
 import styles from "../../styles/_atelier.module.scss";
+import Head from "next/head";
 const Four = () => {
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>La cuisson de la céramique.</title>
+        <meta
+          name="description"
+          content="Démonstration et réparation, moderne et ancien, type de four, vos techniques de cuissons, tout ce qui à rapport avec la cuisson de la céramique doit figurer dans ces articles."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>Les Fours</h1>
         <LinkRetour retour="Retour" />

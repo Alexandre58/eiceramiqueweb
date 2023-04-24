@@ -4,11 +4,18 @@ import React from "react";
 import styles from "../styles/_atelier.module.scss";
 import { v4 as uuidv4 } from "uuid";
 import Userauth from "@/components/Userauth";
-
+import Head from "next/head";
 const Contact = ({ users }) => {
   console.log(users[0].username);
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>Nous contacter</title>
+        <meta
+          name="description"
+          content="Pour toute demande, une page contact à était crée pour vous aider dans vos demarches, vos questions."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>CONTACT</h1>
         <LinkRetour retour="Retour" />

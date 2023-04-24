@@ -6,10 +6,18 @@ import Image from "next/image";
 import img6 from "../../public/images/img6.PNG";
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
+import Head from "next/head";
 const Web = ({ webs }) => {
   console.log(webs);
   return (
     <section className={styles.atelier_section_container}>
+      <Head>
+        <title>Le Web</title>
+        <meta
+          name="description"
+          content="Développement de sites webs sur mesure, adapté aux artisans, site rapide et fiable. Les dernieres technologies au service de l'artisanat."
+        />
+      </Head>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>Les sites Web</h1>
         <LinkRetour retour="Retour" />
