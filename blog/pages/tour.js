@@ -1,7 +1,7 @@
 import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
-import styles from "../../styles/_atelier.module.scss";
+import styles from "../styles/_atelier.module.scss";
 import Head from "next/head";
 const Tour = () => {
   return (

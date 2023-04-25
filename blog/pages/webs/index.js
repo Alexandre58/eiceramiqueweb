@@ -30,7 +30,7 @@ const Web = ({ webs }) => {
           width={1847}
           height={876}
         />
-        <h2>Liste des sites prêt à l'emploi</h2>
+        <h2>Liste des sites prêt à l&prime;emploi</h2>
         {webs.map((web) => {
           return (
             <div key={uuidv4()} className={styles.atelier_section_web_map}>

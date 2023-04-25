@@ -25,7 +25,7 @@ const AsideNav = () => {
         Les articles
       </Link>
 
-      <Link href={"/articles/atelier"} className={styles.asideNav_link}>
+      <Link href={"/atelier"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img2}
@@ -36,7 +36,7 @@ const AsideNav = () => {
         />
         Les ateliers
       </Link>
-      <Link href={"/articles/four"} className={styles.asideNav_link}>
+      <Link href={"/four"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img3}
@@ -47,7 +47,7 @@ const AsideNav = () => {
         />
         Les fours
       </Link>
-      <Link href={"/articles/tour"} className={styles.asideNav_link}>
+      <Link href={"/tour"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img4}
@@ -58,7 +58,7 @@ const AsideNav = () => {
         />
         Les tours
       </Link>
-      <Link href={"/articles/tournage"} className={styles.asideNav_link}>
+      <Link href={"/tournage"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img5}
@@ -101,7 +101,7 @@ const AsideNav = () => {
         />
         Contact
       </Link>
-      <Link href={"/users"} className={styles.asideNav_link}>
+      <Link href={"/usersAteliers"} className={styles.asideNav_link}>
         Adresse Ateliers
       </Link>
     </aside>

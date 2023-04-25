@@ -37,9 +37,7 @@ const User = (props) => {
   return (
     <section className={styles.users_section_container}>
       <div className={styles.users_div_container}>
-        <h1 className={styles.users_section_h1}>
-          Atelier: {props.article[0].username}
-        </h1>
+        <h1 className={styles.users_section_h1}>{props.article[0].username}</h1>
       </div>
       <article className={styles.users_section_article}>
         <h2>
@@ -58,20 +56,6 @@ const User = (props) => {
               {props.article[0].comment}
             </span>
           </p>
-          {/**       <h3>
-            <span>
-              <u>Adresse:</u>
-            </span>
-          </h3>
-          <p className={styles.users_section_article_div_adresse_p}>
-            {user.address.city}
-          </p>
-          <p className={styles.users_section_article_div_adresse_p}>
-            {user.address.street}
-          </p>
-          <p className={styles.users_section_article_div_adresse_p}>
-            {user.address.suite}
-          </p>*/}
         </div>
       </article>
       <AsideNav />

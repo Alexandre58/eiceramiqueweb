@@ -5,7 +5,7 @@ import styles from "../styles/_linkRetour.module.scss";
 const RetourneAdresse = ({ retour }) => {
   return (
     <div>
-      <Link href={"/users"} className={styles.linkRetour_container}>
+      <Link href={"/usersAteliers"} className={styles.linkRetour_container}>
         {retour}
       </Link>
     </div>

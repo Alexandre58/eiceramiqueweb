@@ -5,7 +5,7 @@ import styles from "../styles/_adresseateliers.module.scss";
 const AdresseAteliers = (props) => {
   return (
     <div>
-      <Link href={"/users"} className={styles.adresseatelier_link}>
+      <Link href={"/usersAteliers"} className={styles.adresseatelier_link}>
         {props.title}
       </Link>
     </div>

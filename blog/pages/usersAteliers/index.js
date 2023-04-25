@@ -30,7 +30,7 @@ const AllUsers = ({ users }) => {
             </h1>
             <h2>{user.username}</h2>
 
-            <Link href={`users/${user.id}`}>
+            <Link href={`usersAteliers/${user.id}`}>
               <u>Contacter cette atelier</u>
             </Link>
           </div>
@@ -41,7 +41,7 @@ const AllUsers = ({ users }) => {
     </section>
   );
 };
-//appel api jsonplaceholder
+//appel api eiceramique
 export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/users");
   const users = await res.json();

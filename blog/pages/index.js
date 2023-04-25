@@ -74,7 +74,7 @@ export default function Home(props) {
             />
           </Link>
           {/** card 2*/}
-          <Link className={styles.home_Link} href={"/articles/atelier"}>
+          <Link className={styles.home_Link} href={"/atelier"}>
             <Image
               className={styles.home_Images_widh_differente_les_ateliers}
               src={img2}
@@ -92,7 +92,7 @@ export default function Home(props) {
             />
           </Link>
           {/**card 3 */}
-          <Link className={styles.home_Link} href={"/articles/four"}>
+          <Link className={styles.home_Link} href={"/four"}>
             <Image
               className={styles.home_Images_widh_differente}
               src={img3}
@@ -110,7 +110,7 @@ export default function Home(props) {
             />
           </Link>
           {/**card 4 */}
-          <Link className={styles.home_Link} href={"/articles/tour"}>
+          <Link className={styles.home_Link} href={"/tour"}>
             <Image
               className={styles.home_Images}
               src={img4}
@@ -128,7 +128,7 @@ export default function Home(props) {
             />
           </Link>
           {/**card 5 */}
-          <Link className={styles.home_Link} href={"/articles/tournage"}>
+          <Link className={styles.home_Link} href={"/tournage"}>
             <Image
               className={styles.home_Images}
               src={img5}
