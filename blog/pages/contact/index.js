@@ -1,7 +1,7 @@
 import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
-import styles from "../styles/_atelier.module.scss";
+import styles from "../../styles/_atelier.module.scss";
 import { v4 as uuidv4 } from "uuid";
 import Userauth from "@/components/Userauth";
 import Head from "next/head";

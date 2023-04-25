@@ -22,7 +22,11 @@ import img7 from "../public/images/img7.jpg";
 import img8news from "../public/images/img8news.jpg";
 import AdresseAteliers from "@/components/AdresseAteliers";
 import { isAbsolute } from "path";
+import React, { useContext } from "react";
+
+import { UserContext } from "@/context/UserContext";
 import { useEffect, useState } from "react";
+import AsideProfil from "@/components/AsideProfil";
 
 const path = require("path");
 //appel api
@@ -41,6 +45,7 @@ export default function Home(props) {
   const commentaires = props.articles[0].comment;
   const router = useRouter();
 
+  const { user } = useContext(UserContext);
   return (
     <>
       <Head>
@@ -51,6 +56,15 @@ export default function Home(props) {
         />
       </Head>
       <main className={styles.main}>
+        {user && (
+          <AsideProfil
+            bonjour={"Votre profil"}
+            profilconnect={"modifier votre profil"}
+            textProfil={
+              "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Nesciunt incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea fugiat excepturi labore! Ex minus optio nonconsequuntur, tenetur cupiditate provident! Facere nobis oditolor sit amet consectetur adipisicing elit.Nesciunt incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea fugiat excepturi labore! Ex minus optio nonconsequuntur, tenetur cupiditate provident! Facere nobis odit..."
+            }
+          />
+        )}
         <div className={styles.index_container_h1}>
           <h1>EICERAMIQUE</h1>
 
