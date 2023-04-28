@@ -27,8 +27,8 @@ const Atelier = ({ users }) => {
       </div>
 
       {users.map((user) => (
-        <article className={styles.atelier_section_article}>
-          <div key={uuidv4()} className={styles.users_section_article_map_div}>
+        <article key={uuidv4()} className={styles.atelier_section_article}>
+          <div className={styles.users_section_article_map_div}>
             <Image
               className={styles.atelier_Images}
               src={img9}

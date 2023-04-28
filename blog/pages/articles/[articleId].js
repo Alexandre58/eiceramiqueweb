@@ -15,12 +15,13 @@ const Article = ({ article }) => {
           content="Articles de chaques potier rédigés par leurs propre mots et leurs propre images.Leurs adresses est également disonible si vous passez dans leurs régions."
         />
       </Head>
+
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>{article[0].username}</h1>
       </div>
       <article className={styles.atelier_section_article}>
         <p>
-          Découvrez l&prime;article de{" "}
+          Découvrez l&prime;article de
           <strong>
             {article[0].firstname} {article[0].name}
           </strong>
@@ -45,12 +46,6 @@ const Article = ({ article }) => {
 };
 
 export default Article;
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { articleId: "75" } }],
-    fallback: true,
-  };
-}
 
 export async function getStaticProps(context) {
   //const id = context.params.article;
@@ -65,5 +60,11 @@ export async function getStaticProps(context) {
       article: data,
     },
     revalidate: 10,
+  };
+}
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { articleId: "75" } }],
+    fallback: true,
   };
 }
